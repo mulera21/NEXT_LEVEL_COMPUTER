@@ -14,8 +14,7 @@
                 <img class="card-img-top" src="{{ project.image.url }}">
             {% endif %}
                 <p class="card-text">{{ project.description }}</p>
-                <p class="card-text">{{ project.more }}</p>
-
+                 <a href="{% url 'detail' project.pk %}"><h3>{{ project.more}}</h3></a>
             </div>
         </div>
     </div>

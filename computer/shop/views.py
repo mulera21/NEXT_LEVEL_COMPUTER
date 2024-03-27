@@ -7,3 +7,11 @@ def project_index(request):
         "projects": projects
     }
     return render(request, "index.html", context)
+
+
+def project_detail(request, pk):
+    project = Item.objects.get(pk=pk)
+    context = {
+        "project": project
+    }
+    return render(request, "item_detail.html", context)

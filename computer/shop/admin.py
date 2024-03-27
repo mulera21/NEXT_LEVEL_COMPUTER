@@ -3,7 +3,7 @@ from .models import Item
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ("title", "image", "more", "description")
+    list_display = ("title", "image", "more", "description", "info")
     search_field = ("title", "description")
 
 
