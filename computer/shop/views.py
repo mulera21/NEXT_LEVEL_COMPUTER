@@ -6,6 +6,6 @@ def project_index(request):
     project = Item.objects.all()
 
     context = {
-        "project" : project
+        "project": project
     }
     return render(request, "templates/index.html", context)
