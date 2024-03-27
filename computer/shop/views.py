@@ -4,8 +4,7 @@ from .models import Item
 
 def project_index(request):
     project = Item.objects.all()
-
     context = {
         "project": project
     }
-    return render(request, "templates/index.html", context)
+    return render(request, "index.html", context)
