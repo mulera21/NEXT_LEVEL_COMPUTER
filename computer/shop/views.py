@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from .models import Item
-
+from shop.models import Item
 
 def project_index(request):
-    project = Item.objects.all()
+    projects = Item.objects.all()
     context = {
-        "project": project
+        "projects": projects
     }
     return render(request, "index.html", context)
