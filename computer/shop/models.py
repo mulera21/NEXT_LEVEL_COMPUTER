@@ -7,7 +7,7 @@ class Item(models.Model):
     description = models.TextField()
     more = models.CharField(max_length=2500)
     image = models.FileField(upload_to="projects", blank=True)
-    info = models.TextField()
+    info = models.CharField(max_length=4800)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
 
     def __str__(self):
